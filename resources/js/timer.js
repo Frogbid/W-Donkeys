@@ -11,7 +11,7 @@
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         nextYear = yyyy + 1,
-        dayMonth = "09/30/",
+        dayMonth = "04/22/",
         birthday = dayMonth + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;
@@ -25,8 +25,8 @@
 
             const now = new Date().getTime(),
                 distance = countDown - now;
-            /*document.getElementById("days").innerText = Math.floor(distance / (day)),*/
-                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+            let days = Math.floor((distance / (day))*24);
+                document.getElementById("hours").innerText = Math.floor(((distance % (day)) / (hour)) + days),
                 document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
                 document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
