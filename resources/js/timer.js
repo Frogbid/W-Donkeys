@@ -25,8 +25,8 @@
 
             const now = new Date().getTime(),
                 distance = countDown - now;
-            let days = Math.floor((distance / (day))*24);
-                document.getElementById("hours").innerText = Math.floor(((distance % (day)) / (hour)) + days),
+            document.getElementById("days").innerText = Math.floor(distance / (day));
+                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
                 document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
                 document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
