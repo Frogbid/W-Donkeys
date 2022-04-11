@@ -389,7 +389,7 @@ a.button {
 }
 .island-content h2::after {
   position: absolute;
-  content: "Welcome To";
+  content: "Win Big at the";
   top: -0.3rem;
   right: 0;
   color: #1d1d1b;
